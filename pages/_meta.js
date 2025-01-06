@@ -9,7 +9,7 @@ export default {
   blogs: {
     theme: {
       toc: true,
-      sidebar: false,
+      sidebar: true,
     },
   },
 };

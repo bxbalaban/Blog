@@ -5,7 +5,7 @@ import { useRouter } from "nextra/hooks";
 
 export function Blog() {
   return getPagesUnderRoute(`/blogs`).map((page) => {
-    console.log(page);
+    
 
     return (
       <div key={page.route} className="my-8">
