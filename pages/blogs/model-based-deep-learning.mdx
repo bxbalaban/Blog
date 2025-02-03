@@ -49,9 +49,9 @@ Each decision-making process relies on three fundamental components:
 3. **Evaluation Procedure**: How the rule is tested and validated, often using simulations.
 
 4. **Super-Resolution**: Here, $s$ is a high-resolution image, while $x$ is a distorted low-resolution version of the image. Thus, $X$ and $S$ are the spaces of low-resolution and high-resolution images, respectively. Such decision rules, typically referred to as recovery methods, aim at reconstructing $s_{true}$ from its distorted version $x$, as illustrated in Fig. 1.
-   ![figure-1](../../images/blog-model-based-deep-learning/figure-1.png)
+   - ![figure-1](../../images/blog-model-based-deep-learning/figure-1.png)
 5. **Stochastic Control**: In this example, we consider a dynamic system, where the decision rule is a control policy. At each time period $t$, the goal is to map the noisy state observations $x_t$, where $X$ is the space of possible sensory measurements, into an action $s_t$ within an action space $S$. The system is characterized by a latent state vector $z_t$ that evolves in a random fashion which is related to the previous state $z_{t−1}$ and action $s_{t−1}$, while being partially observable via the noisy $x_t$. This setup is illustrated in Fig. 2.
-   ![figure-2](../../images/blog-model-based-deep-learning/figure-2.png)
+   - ![figure-2](../../images/blog-model-based-deep-learning/figure-2.png)
 ---
 
 ### 🔢 Types of Decision Rules
@@ -78,7 +78,7 @@ Creating a decision rule is a three-step process:
 
 For example, in a super-resolution task, the context **$x$** could be a low-resolution image, and the decision **$s$** would be the high-resolution output. The decision rule might involve an optimization-based iterative algorithm or a deep neural network trained on image data.
 
-![figure-3](../../images/blog-model-based-deep-learning/figure-3.png)
+- ![figure-3](../../images/blog-model-based-deep-learning/figure-3.png)
 
 ### 🤝 Model-Based vs. Data-Centric
 
@@ -86,7 +86,7 @@ Traditional **model-based methods** focus on using domain knowledge to create de
 
 The key insight of this paper is that <ins>these approaches are not opposites but rather two ends of a spectrum </ins>. **Model-based deep learning** leverages the strengths of both, using data to tune decision rules while retaining the interpretability and structure of model-based methods.
 
-## 🧩 Model-Based Methods: Leveraging Mathematical Precision
+## Model-Based Methods: Leveraging Mathematical Precision
 
 Model-based methods form the foundation of many classical decision-making techniques, relying on mathematical models and domain knowledge to craft solutions. These approaches aim to create a decision rule by formulating and solving an optimization problem based on a well-defined objective. While powerful and interpretable, model-based methods often face challenges when real-world scenarios deviate from their underlying assumptions.
 
@@ -256,7 +256,7 @@ Hybrid methods operate in the middle ground, combining specificity and parameter
 
 Hybrid model-based deep learning optimizers fall into three main categories, each balancing the two paradigms differently:
 
-![figure-4](../../images/blog-model-based-deep-learning/figure-4.png)
+- ![figure-4](../../images/blog-model-based-deep-learning/figure-4.png)
 
 ### 1️⃣ Learned Optimizers
 
@@ -359,7 +359,7 @@ Deep unfolding was applied to the task of removing clutter in contrast-enhanced 
 - Cluttered Image: Blurred and noisy.
 - Recovered Image: Clear contrast agent visualization with reduced artifacts.
 
-![figure-6](../../images/blog-model-based-deep-learning/figure-6.png)
+- ![figure-6](../../images/blog-model-based-deep-learning/figure-6.png)
 
 > Fig. 6 illustrates the efficiency and accuracy of deep unfolding for rapid and reliable inference. In Fig. 6(c), an ultrasound image with contrast agents is recovered from clutter (Fig. 6(a)) using deep unfolding of RPCA, closely matching the ground truth in Fig. 6(b). The unfolded network, trained layer-wise from data, achieves high accuracy with significantly fewer layers compared to the iterative steps required by the model-based ISTA algorithm. As shown in Fig. 6(d), the unfolded network reaches a superior mean-squared error (MSE) with only a few layers, outperforming the fast ISTA method, even after 50 iterations.
 
@@ -377,7 +377,7 @@ Results:
 - Benign lesions (e.g., fibroadenomas) and malignant masses (e.g., invasive ductal carcinoma) were visualized with greater clarity.
 - Enabled more confident diagnostic decisions.
 
-![figure-7](../../images/blog-model-based-deep-learning/figure-7.png)
+- ![figure-7](../../images/blog-model-based-deep-learning/figure-7.png)
 
 > Fig. 7 showcases the ability of LISTA to enhance ultrasound resolution, aiding in medical diagnosis. The super-resolved images reveal detailed features: a fibroadenoma (top) appears as an oval, well-circumscribed mass with homogeneous vascularization; a cyst (middle) is shown as a round structure with dense blood vessels at the periphery; and an invasive ductal carcinoma (bottom) presents as an irregular mass with ill-defined margins, peripheral vascularization, and low central vascularization. These critical diagnostic features are not discernible in the low-resolution images.
 
@@ -392,7 +392,7 @@ In microscopy, hybrid methods like LISTA (Learned Iterative Shrinkage-Thresholdi
 - **Input**: Low-resolution microscopy images.
 - **Output**: High-resolution reconstructions with detailed cellular structures.
 - **Performance:** - The hybrid method achieved superior resolution with fewer iterations. - Addressed mismatches in mathematical models, resulting in better generalization to unseen data.
-  ![figure-8](../../images/blog-model-based-deep-learning/figure-8.png)
+  - ![figure-8](../../images/blog-model-based-deep-learning/figure-8.png)
 
 > Experimental results of applying the deep unfolded map- ping trained for super-resolution in microscopy imaging are depicted in Fig. 8
 
@@ -407,7 +407,7 @@ Hybrid methods were tested in symbol detection for communication systems, where 
 - **Input:** Noisy channel output samples.
 - **Output:** Correctly decoded transmitted symbols.
 - **Performance:** - The hybrid method matched the performance of a traditional SP algorithm under perfect conditions. - When channel state information (CSI) was uncertain, the hybrid approach maintained robustness, outperforming both classical SP and black-box deep learning methods.
-  ![figure-9](../../images/blog-model-based-deep-learning/figure-9.png)
+  - ![figure-9](../../images/blog-model-based-deep-learning/figure-9.png)
   > Fig. 9 presents the symbol error rate (SER) performance of a DNN-aided sum-product (SP) algorithm trained with 5000 labeled samples, compared to a model-based SP algorithm (requiring full statistical knowledge) and a sliding bidirectional RNN detector from [45]. The results highlight that the learned factor graph approach achieves accuracy close to the model-based SP and is robust to model uncertainty, outperforming black-box DNN architectures like the RNN detector with limited training data.
 
 ---
@@ -421,7 +421,7 @@ A DNN-aided Kalman filter was applied to track the chaotic Lorentz attractor sys
 - **Input:** Noisy observations of a chaotic system.
 - **Output:** Accurate trajectory estimates.
 - **Performance:** - Hybrid KalmanNet achieved 6 dB lower MSE compared to the traditional extended Kalman filter. - Faster inference time compared to particle filters, while maintaining interpretability.
-  ![figure-10](../../images/blog-model-based-deep-learning/figure-10.png)
+  - ![figure-10](../../images/blog-model-based-deep-learning/figure-10.png)
 
 > Fig. 10 and Table 1 demonstrate the dual benefits of DNN-aided optimization. First, it achieves superior MSE performance by combining state-space domain knowledge with a DNN, enabling it to handle complex dynamics and mitigate mismatches from the surrogate objective. Second, the integration of deep learning significantly speeds up operations compared to model-based methods, as the DNN replaces computationally intensive iterative processes with fixed-complexity inference.
 
