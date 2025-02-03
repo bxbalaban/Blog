@@ -10,6 +10,7 @@ export default {
     theme: {
       toc: true,
       sidebar: true,
+
     },
   },
 };

@@ -1,3 +1,5 @@
+
+
 const currentYear = new Date().getFullYear();
 
 export default {
@@ -7,6 +9,8 @@ export default {
   },
   readMore: "Read More →",
   postFooter: null,
-  darkMode: false,
-  navs: [],
+  
+  themeSwitch:{ 
+    component : null,
+  }
 };
