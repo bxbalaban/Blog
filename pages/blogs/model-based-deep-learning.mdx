@@ -3,8 +3,8 @@ title: 🚀 Model Based Deep Learning
 ---
 
 # Model-Based Deep Learning: On the Intersection of Deep Learning and Optimization
+**Summary of the paper [Model-Based Deep Learning: On the Intersection of Deep Learning and Optimization published in IEEE Signal Processing Magazine](https://arxiv.org/abs/2205.02640), 2022, by [Nir Shlezinger](https://arxiv.org/search/eess?searchtype=author&query=Shlezinger,+N), [Yonina C. Eldar](https://arxiv.org/search/eess?searchtype=author&query=Eldar,+Y+C), and [Stephen Boyd](https://arxiv.org/search/eess?searchtype=author&query=Boyd,+S+P).**
 
-Summary of the paper [Model-Based Deep Learning: On the Intersection of Deep Learning and Optimization published in IEEE Signal Processing Magazine](https://arxiv.org/abs/2205.02640)
 
 ## Introduction
 
@@ -16,7 +16,7 @@ In this blog, I’ll break down the key ideas, methods, and real-world examples 
 
 Whether you’re just starting out or diving deeper into AI, this blog will guide you through the exciting possibilities of model-based deep learning. Let’s explore this game-changing intersection together! 🎉
 
-## 🧠 Decision Making: The Core of Model-Based Deep Learning
+## Decision Making: The Core of Model-Based Deep Learning
 
 At its heart, decision-making involves designing a mapping that takes available information _(the context)_ and transforms it into an actionable outcome _(the decision)_. Whether we’re classifying images, controlling vehicles, or managing financial trades, the challenge boils down to creating an effective decision rule—a mathematical function that translates inputs into outputs.
 
@@ -46,13 +46,12 @@ Each decision-making process relies on three fundamental components:
 
 1. **Decision Rule Type**: The structure of the rule (e.g., linear, tree-based, neural network).
 2. **Objective**: The criteria used to evaluate the performance of the decision rule.
-3. **Evaluation** Procedure: How the rule is tested and validated, often using simulations.
+3. **Evaluation Procedure**: How the rule is tested and validated, often using simulations.
 
-- 1.Super-Resolution : Here, $s$ is a high-resolution image, while $x$ is a distorted low-resolution version of the image. Thus, $X$ and $S$ are the spaces of low-resolution and high-resolution images, respectively. Such decision rules, typically referred to as recovery methods, aim at reconstructing strue from its distorted version $x$, as illustrated in Fig. 1.
-  ![figure-1](../../images/blog-model-based-deep-learning/figure-1.png)
-- 2.Stochastic Control : In our second example, we consider a dynamic system, where the decision rule is a control policy. At each time period $t$, the goal is to map the noisy state observations $xt$, where $X$ is the space of possible sensory measurements, into an action $st$ within an action space $S$. The system is characterized by a latent state vector $zt$ that evolves in a random fashion which is related to the previous state $zt−1$ and action $st−1$, while being partially observable via the noisy $xt$. This setup is illustrated in Fig. 2.
-  ![figure-2](../../images/blog-model-based-deep-learning/figure-2.png)
-
+4. **Super-Resolution**: Here, $s$ is a high-resolution image, while $x$ is a distorted low-resolution version of the image. Thus, $X$ and $S$ are the spaces of low-resolution and high-resolution images, respectively. Such decision rules, typically referred to as recovery methods, aim at reconstructing $s_{true}$ from its distorted version $x$, as illustrated in Fig. 1.
+   ![figure-1](../../images/blog-model-based-deep-learning/figure-1.png)
+5. **Stochastic Control**: In this example, we consider a dynamic system, where the decision rule is a control policy. At each time period $t$, the goal is to map the noisy state observations $x_t$, where $X$ is the space of possible sensory measurements, into an action $s_t$ within an action space $S$. The system is characterized by a latent state vector $z_t$ that evolves in a random fashion which is related to the previous state $z_{t−1}$ and action $s_{t−1}$, while being partially observable via the noisy $x_t$. This setup is illustrated in Fig. 2.
+   ![figure-2](../../images/blog-model-based-deep-learning/figure-2.png)
 ---
 
 ### 🔢 Types of Decision Rules
@@ -157,7 +156,7 @@ While model-based methods excel in interpretability and reliability, their limit
 
 In the next section, we’ll delve into **deep learning approaches** and examine how they contrast with and complement model-based methods. Stay tuned for the exciting interplay between these two worlds! 🌟
 
-## 🤖 Deep Learning: Data-Driven Decision Making
+## Deep Learning: Data-Driven Decision Making
 
 ---
 
@@ -234,7 +233,7 @@ The challenges of deep learning pave the way for model-based deep learning, whic
 
 Next, we’ll explore how combining these two paradigms—through methods like deep unfolding and DNN-aided optimization—creates powerful hybrid solutions that outperform either approach alone.
 
-## 🔗 Hybrid Model-Based Deep Learning Optimizers: The Best of Both Worlds
+## Hybrid Model-Based Deep Learning Optimizers: The Best of Both Worlds
 
 ---
 
@@ -332,7 +331,7 @@ Hybrid model-based deep learning optimizers are already proving their value in d
 
 Hybrid model-based deep learning optimizers redefine the way we approach decision-making tasks. By integrating the best of both worlds, these systems address the limitations of purely model-based or deep learning methods, paving the way for more efficient, interpretable, and scalable solutions.
 
-## 🧪 Experimental Results: The Power of Hybrid Model-Based Deep Learning
+## Experimental Results: The Power of Hybrid Model-Based Deep Learning
 
 ---
 
@@ -435,7 +434,7 @@ A DNN-aided Kalman filter was applied to track the chaotic Lorentz attractor sys
 3. **Robustness:** These methods handle model mismatches and generalize better to unseen data.
 4. **Interpretability:** Retaining the structure of model-based methods ensures interpretability, critical for high-stakes applications like medical imaging and autonomous systems.
 
-## 🌟 Conclusion: The Future of Decision-Making
+## Conclusion: The Future of Decision-Making
 
 ---
 
@@ -480,7 +479,7 @@ While hybrid model-based deep learning optimizers offer transformative potential
 - **Interpretability Trade-offs:** While hybrid methods are more interpretable than black-box deep learning, the neural components can still obscure parts of the decision-making process.
 - **Bias and Fairness:** Combining models and data-driven learning could inadvertently propagate biases from both sides, leading to ethical concerns in sensitive applications.
 
-## 📚 Resources for Learning and Development
+## Resources for Learning and Development
 
 ---
 
